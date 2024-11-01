@@ -1,0 +1,181 @@
+/* HEADER */
+
+/* 
+palette:
+#E77167
+#C25149
+#9D302E
+#790814
+#560000
+ */
+
+.nav {
+    position: fixed;
+    top:0px;
+    z-index:1000;
+    width: 100%;
+    background-color: #E77167;
+    height: 70px;
+    margin-bottom: 10px;
+    box-shadow: 0px 10px 2px #C25149;
+    display: flex;
+}
+
+.nav > nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+  
+/* header logo */
+
+.nav > nav > .nav-logo {
+    margin: 0px 10px 0px 10px;
+}
+
+/* header buttons for PC version */
+
+.nav > nav > .nav-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    margin-right: 20px;
+    padding-top: 15px;
+    font-size: large;
+}
+
+.nav > nav > .nav-buttons > a {
+    margin-left: 15px;
+    padding: 10px;
+    color: #9D302E;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.nav > nav > .nav-buttons > a:hover {
+    color: #fff;
+    transition: .25s;
+}
+
+/* header hamburger-menu for mobile version */
+
+.nav > nav > .hamburger-menu > #menu__toggle, .menu__box {
+    display: none;
+}
+
+.menu__btn {
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+    .nav-buttons {
+        visibility: hidden;
+    }
+
+    /* stylization of hamburger-menu button */
+
+    .nav > nav > .hamburger-menu > .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 90%;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #C25149;
+    }
+
+    /* stylization of hamburger-menu menu container */
+
+    .nav > nav > .hamburger-menu > .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 380px;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: rgba(231, 113, 103, 0.8);
+        z-index: -100;
+    }
+
+    /* stylization of hamburger-menu items */
+
+    .menu__item {
+        display: block;
+        text-decoration: none;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: large;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        color: #fff;
+    }
+
+    .menu__item:hover {
+        background-color: rgba(194, 81, 73, 0.7);
+    }
+
+    
+
+    /* hamburger-menu button animation */
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    .menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
+        transition-duration: .25s;
+    }
+
+    .menu__box {
+        transition-duration: .25s;
+    }
+    .menu__item {
+        transition-duration: .25s;
+    }
+
+    /* open/close hamburger-menu */
+
+    #menu__toggle:checked + label + ul {
+        visibility: visible;
+        top: 0%;
+    }
+}

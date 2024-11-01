@@ -1,0 +1,194 @@
+.hello_world_container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.words-type-container {
+    margin-top: 230px;
+    margin-right: 50px;
+}
+
+.my_portert {
+    margin-top: 20px;
+}
+
+.words-type h1 {
+    color: #000000;
+    font-size: 70px;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid #C25149;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #C25149}
+}
+
+.appearing-text {
+    margin-top: 10px;
+    font-family: sans-serif; 
+    font-size: 30px;
+    font-weight: bolder;
+    color: #C25149; 
+    position: relative;
+    animation-name: textappear;
+    animation-duration: 7s;
+}
+
+@keyframes textappear {
+    0%  {color: #FFFFFF;}
+    100% {color: #C25149;}
+}
+
+@media screen and (max-width: 1024px) {
+    .words-type h1 {
+        font-size: 30px;
+    }
+
+    .appearing-text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    .container {
+        overflow-x: hidden;
+    }
+
+    .hello_world_container {
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+    }
+
+    .words-type-container {
+        background-color: #E77167;
+        order: -1;
+        margin: 70px 30px 30px 30px;
+        padding: 20px;
+        box-shadow: -10px 10px 2px #C25149;
+    }
+
+    .appearing-text {
+        color: #FFFFFF;
+        animation-name: textappear;
+        animation-duration: 0s;
+    }
+
+    .my_portert {
+        width: 100%;
+    }
+
+    .my_portret img {
+        width: 100%;
+    }
+
+}
+
+.about_me {
+    width: 100%;
+    text-align: center;
+}
+
+.about_me > p{
+    font-family: sans-serif;
+    color: #790814;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.quote {
+    font-style: italic;
+    margin-top: 20px;
+    color: #E77167 !important;
+    font-family: yarin, 'Times New Roman', Times, serif !important;
+    font-size: 20px !important;
+    margin-bottom: 20px;
+    background-color: #9d302e;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.my_pens {
+    width: 100%;
+}
+
+.my_pens_container, .about, .contact_me {
+    width: 100%;
+    background-color: #E77167;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: -10px 10px 2px #C25149;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    min-height: 200px;
+}
+
+h2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #790814;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+h2 > a {
+    color: #790814;
+}
+
+h2 > a:hover {
+    color: #FFFFFF;
+}
+
+figure {
+    background-color: #E77167; 
+}
+
+.photo {
+    padding: 70px;
+    box-sizing: border-box;
+    margin: 0px;
+    display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+
+.gallery {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+figcaption {
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    color: #790814;
+    font-weight: bold;
+    font-size: large;
+}

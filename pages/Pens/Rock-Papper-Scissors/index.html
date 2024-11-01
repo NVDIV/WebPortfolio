@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVDIV</title>
+    <link rel="shortcut icon" href="/pictures/N.png" type="image/png">
+    <script async src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>ROCK PAPPER SCISSORS</h1></div>
+        <div class="score">
+            <table>
+                <tr>
+                <td><span id="nick">Your score</span></td>
+                <td>Bot`s score</td>
+            </tr>
+            <tr>
+                <td><span id="player_score">0</span></td>
+                <td> <span id="bot_score">0</span></td>
+            </tr>
+            </table>
+        </div>
+        <div class="instructions"><p id="info">Your choice</p></div>
+        <div class="buttons">
+            <button id="rock" onclick="rock()"><img src="pictures/rock.png" alt="" width="150px"></button>
+            <button id="scissors" onclick="scissors()"><img src="pictures/scissors.png" alt="" width="150px"></button>
+            <button id="paper" onclick="paper()"><img src="pictures/paper.png" alt="" width="150px"></button>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

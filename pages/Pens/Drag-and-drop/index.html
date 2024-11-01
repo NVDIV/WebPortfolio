@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVDIV</title>
+    <link rel="shortcut icon" href="/pictures/N.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script async src="js.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Backery game</h1>
+            <p id="shown">Transfer the entire order to the package.</p>
+        </header>
+        <div id="hidden">
+            <p>Good job!</p>
+            <button onclick="next_order()">To the next order</button>
+        </div>
+    <div id="task"></div>
+</div>
+    <main class="main">
+        <div class="table">
+            <div class="plate">
+                <img src="pictures/bag.png" id="target" data-target-id="target-id" alt="" width="100px">
+            </div>
+            <div class="draggable-list">
+                <ul>
+                    <li  draggable="true" id=" chocolate cake"><img src="pictures/chocolate_cake.png" alt="" width="100px"></li>
+                    <li id=" hazelnut cake" draggable="true"><img src="pictures/hazelnut_cake.png" alt="" width="100px"></li>
+                    <li id=" red velvet cake" draggable="true"><img src="pictures/red_velvet_cake.png" alt="" width="100px"></li>
+                    <li id=" strawberry cake" draggable="true"><img src="pictures/strawberry_cake.png" alt="" width="100px"></li>
+                    <li id=" blueberry cake" draggable="true"><img src="pictures/blueberry_cake.png" alt="" width="100px"></li>
+                </ul>
+        </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+#game {
+    display: block;
+    margin: 0 auto;
+}
+
+* {
+    flex-direction: column;
+    background-color: #144f00;
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    color: #ffffff;
+}
